@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Roboto:wght@400;700&display=swap');
+
+/* Global styles */
+:root {
+  --olive-green-light-clr: #a9d15f;
+  --olive-green-dark-clr: #8ba75a;
+  --sea-blue-light-clr: #15b8c1;
+  --sea-blue-dark-clr: #279799;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 100%;
+  min-height: 100vh;
+  font-family: 'Roboto', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background-color: var(--olive-green-light-clr);
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Reusables */
+.shadow {
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.35);
+}
+
+/* Typography */
+h1 {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 2.5rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+header img {
+  max-width: 200px;
+  margin-top: 1rem;
+}
+
+/* Main */
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
+section {
+  padding: 1rem;
+  position: relative;
+}
+
+p {
+  margin-block: 1rem;
+}
+
+.result {
+  padding: 1rem 2rem 1rem 2rem;
+  position: relative;
+}
+
+.close-window {
+  color: #777;
+  position: absolute;
+  right: 1.25rem;
+  top: 1rem;
+  cursor: pointer;
+}
+
+/* Section: Search Form */
+form input {
+  border: 1px solid #999;
+  outline: none;
+  border-radius: 4px 0 0 4px;
+  padding: 0.44rem 1rem;
+  width: 250px;
+}
+
+form button {
+  border: none;
+  vertical-align: middle;
+  border-radius: 0 4px 4px 0;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--olive-green-light-clr);
+  outline: none;
+  margin-left: -6px;
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+}
+
+form button:hover {
+  filter: brightness(120%);
+}
+
+form input:focus {
+  border: 1px solid var(--sea-blue-light-clr);
+  background-color: #eee;
+}
+
+/* Section: Results */
+
+.country-flag {
+  margin-right: 4px;
+  width: 40px;
+}
+
+.country-name {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.names-population {
+  border-top: 1px solid #bbb;
+  padding-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  font-size: 0.9rem;
+  padding: 2rem;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+/* Messages */
+.message-output {
+  font-size: 0.8rem;
+  position: absolute;
+  top: 3.15rem;
+  left: 16px;
+  color: red;
+  text-align: left;
+}
