@@ -57,7 +57,7 @@ window.addEventListener('load', () => {
         <p>${displayLanguages(languageArray)}.</p>
       </article>
       `;
-    formInput.value = null; // Clean up search input field
+    formInput.value = null; // Clean up search input field after query and showing results
   }
 
   // Show messages and delete them after 3 seconds
