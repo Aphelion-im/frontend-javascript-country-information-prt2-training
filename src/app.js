@@ -92,20 +92,11 @@ window.addEventListener('load', () => {
   function displayLanguages(languageArray) {
     let outputLanguage = 'They speak ';
 
-    for (let i = 0; i < languageArray.length; i++) {
-      if (i === languageArray.length - 1 && languageArray.length > 1) {
-        return (outputLanguage = outputLanguage + ' and ' + languageArray[i]);
-      } else if (
-        i !== languageArray - 1 &&
-        languageArray.length > 1 &&
-        languageArray.length - 2
-      ) {
-        outputLanguage = outputLanguage + languageArray[i] + ', ';
-      } else {
-        outputLanguage = outputLanguage + languageArray[i];
-      }
+    if (languageArray.length == 2){
+        return `${outputLanguage}${languageArray[0]} and ${languageArray[1]}`;
     }
-    return outputLanguage;
+    
+    return `${outputLanguage}${languageArray.slice(0, -1).join(", ")} and ${languageArray[languageArray.length -1]}`;
   }
 
   // Event listeners
